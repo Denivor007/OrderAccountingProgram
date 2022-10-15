@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="WorkFieldVBox" prefWidth="735.0" styleClass="container" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.orderaccountingprogram.ChartController">
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <children>
+        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="735.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="276.0" text="ORDER CHART" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Console" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <LineChart fx:id="lineChart" onMouseClicked="#chartDataPrint" stylesheets="@../../../style.css">
+            <xAxis>
+                <NumberAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+      <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="50.0" prefWidth="735.0">
+         <items>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="120.0">
+               <children>
+                  <CheckBox fx:id="profitCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="profit" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="120.0">
+               <children>
+                  <CheckBox fx:id="distanceCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="69.0" text="distance" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="126.0">
+               <children>
+                  <CheckBox fx:id="intravelCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="in travel time" />
+                  <CheckBox fx:id="offtravelCheck" mnemonicParsing="false" text="off travel time" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="139.0">
+               <children>
+                  <CheckBox fx:id="paidCheck" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" text="paid trip" />
+                  <CheckBox fx:id="canceledCheck" mnemonicParsing="false" text="canceled trip" />
+               </children>
+            </VBox>
+         </items>
+      </ToolBar>
+    </children>
+</VBox>

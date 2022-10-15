@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" styleClass="gradient-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.orderaccountingprogram.AuthorizationFormController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="480.0" styleClass="container" stylesheets="@../../../style.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="container" stylesheets="@../../../style.css">
+               <children>
+                  <Pane maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@../../../style.css">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Pane>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="300.0" text="AUTORISATION" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Console" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@../../../style.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Pane>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="230.0" prefWidth="480.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="354.0" text="E-MAIL" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Console" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="email" maxWidth="-Infinity" prefHeight="25.0" prefWidth="354.0" />
+                  <Label fx:id="incorrectEmail" prefHeight="17.0" prefWidth="350.0" textFill="RED">
+                     <font>
+                        <Font name="Lucida Fax Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="126.0" prefWidth="480.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="35.0" prefWidth="351.0" text="PASSWORD" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Console" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <PasswordField fx:id="password" alignment="CENTER" maxWidth="-Infinity" prefHeight="25.0" prefWidth="353.0" />
+                  <Label fx:id="incorrectPassword" prefHeight="17.0" prefWidth="344.0" textFill="RED">
+                     <font>
+                        <Font name="Lucida Fax Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="126.0" prefWidth="480.0">
+               <children>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#autorisation" prefHeight="47.0" prefWidth="105.0" text="SUBMIT">
+                     <font>
+                        <Font name="Lucida Console" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

@@ -1,0 +1,38 @@
+.gradient-background{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%,#6495ED,#1E90FF);
+}
+.line-color{
+    -fx-background-color: white ;
+}
+.container{
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 10;
+}
+
+.chart{
+    -fx-background-color: transparent;
+    -fx-font-size: 20;
+    -fx-font-family: 'Lucida Console';
+   /* -fx-legend-visible: false;*/
+}
+
+.axis-label{
+    -fx-text-fill: #0e0e0e;
+}
+
+.chart-plot-background{
+    -fx-background-color: transparent;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #c1f3ff
+}
+.default-color1.chart-series-line { -fx-stroke: #e874ff
+}
+.default-color2.chart-series-line { -fx-stroke: #fab381
+}
+.default-color3.chart-series-line { -fx-stroke: #c1ff63
+}
+.default-color4.chart-series-line { -fx-stroke: #d75858
+}
+.default-color5.chart-series-line { -fx-stroke: #36459f
+}

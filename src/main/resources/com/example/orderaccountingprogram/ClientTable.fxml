@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="WorkFieldVBox" prefWidth="735.0" styleClass="container" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.orderaccountingprogram.ClientTableController">
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <children>
+        <HBox alignment="CENTER" prefHeight="41.0" prefWidth="735.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="276.0" text="ORDER TABLE" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Console" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <TableView fx:id="ClientTable" onMouseClicked="#tableFieldAction" prefHeight="401.0" prefWidth="735.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="41.0" text="id" />
+                <TableColumn fx:id="emailCol" prefWidth="62.0" text="driver id" />
+                <TableColumn fx:id="nameCol" prefWidth="64.0" text="client id" />
+                <TableColumn fx:id="surnameCol" prefWidth="77.0" text="distance" />
+
+            </columns>
+        </TableView>
+    </children>
+</VBox>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.55" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient-background" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.orderaccountingprogram.MainController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="69.0" prefWidth="322.0" text="ORDER ACCAUNTING PROGRAM" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="20.0" />
+               </font>
+            </Label>
+            <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@../../../style.css" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="20.0" right="40.0" />
+               </HBox.margin>
+            </Pane>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+               <image>
+                  <Image url="@../../../../img/117122.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="50.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox fx:id="toAdn" prefHeight="483.0" prefWidth="220.0" styleClass="container" stylesheets="@../../../style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Label alignment="BASELINE_LEFT" onMouseClicked="#viewtable" prefHeight="27.0" prefWidth="206.0" text=" Logned admin:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Fax Regular" size="14.0" />
+               </font>
+            </Label>
+            <Pane fx:id="adminEmail" prefHeight="60.0" prefWidth="220.0" />
+            <Pane maxHeight="-Infinity" prefHeight="1.0" prefWidth="200.0" styleClass="line-color" stylesheets="@../../../style.css">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Pane>
+            <Label fx:id="TableCallBtn" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#viewtable" prefHeight="60.0" prefWidth="240.0" styleClass="container" stylesheets="@../../../style.css" text="ORDERS TABLE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="ChartCallBtn" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#viewchart" prefHeight="60.0" prefWidth="240.0" styleClass="container" stylesheets="@../../../style.css" text="ORDERS CHART" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="DriversCallBtn" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#viewdriver" prefHeight="60.0" prefWidth="240.0" styleClass="container" stylesheets="@../../../style.css" text="DRIVERS TABLE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="ClientsCallBtn" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#viewclient" prefHeight="60.0" prefWidth="240.0" styleClass="container" stylesheets="@../../../style.css" text="CLIENTS TABLE" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="WorkField" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox prefHeight="60.0" prefWidth="200.0" styleClass="container" stylesheets="@../../../style.css">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="refreshBtn" mnemonicParsing="false" onAction="#sendDataToTable" prefHeight="58.0" prefWidth="101.0" text="REFRESH" />
+                  <Button fx:id="clearS" mnemonicParsing="false" onAction="#clearTime" prefHeight="25.0" prefWidth="23.0" text="Clear" />
+                  <DatePicker fx:id="startField" />
+                  <Button fx:id="clearE" mnemonicParsing="false" onAction="#clearTime" prefHeight="20.0" prefWidth="22.0" text="Clear" />
+                  <DatePicker fx:id="endField" />
+                  <ChoiceBox fx:id="driverField" prefWidth="150.0" />
+                  <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="22.0" text="Button" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
